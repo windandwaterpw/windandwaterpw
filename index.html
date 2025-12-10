@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Wind + Water | Residential & Commercial Pressure Washing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Wind + Water provides professional residential and commercial pressure washing services. Free estimates. Call 202-878-0164 or email windandwaterpw@gmail.com." />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #f3ecdd;
+      --bg-dark: #222222;
+      --accent: #4d3825;
+      --accent-light: #7a5a3b;
+      --text: #2c2c2c;
+      --white: #ffffff;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Open Sans", sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* HEADER */
+    header {
+      position: sticky; top: 0; z-index: 1000;
+      background-color: rgba(243,236,221,0.98);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      backdrop-filter: blur(4px);
+    }
+
+    .nav {
+      max-width: 1100px; margin: 0 auto;
+      padding: 0.75rem 1.25rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+
+    .nav-left { display: flex; align-items: center; gap: 0.75rem; }
+    .logo-mark { height: 46px; }
+
+    .brand-text { display: flex; flex-direction: column; line-height: 1.1; }
+    .brand-name {
+      font-family: Cinzel, serif;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      font-size: 0.9rem;
+      color: var(--accent);
+      text-transform: uppercase;
+    }
+
+    .brand-tagline {
+      font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.18em;
+    }
+
+    .nav-links {
+      display: flex; gap: 1.5rem;
+      font-size: 0.9rem; text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .nav-cta {
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      background-color: var(--accent);
+      color: var(--bg);
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .nav-phone { font-size: 0.85rem; font-weight: 600; }
+
+    .mobile-menu-btn {
+      display: none; background: none; border: none;
+      font-size: 1.4rem; cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(120deg, rgba(34,34,34,0.7), rgba(77,56,37,0.7)),
+        url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c") center/cover no-repeat;
+      color: var(--bg);
+      padding: 4.5rem 1.5rem 4rem;
+    }
+
+    .hero-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .hero-title {
+      font-family: Cinzel, serif;
+      font-size: clamp(2.1rem, 3vw, 2.8rem);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-subtitle {
+      font-size: 0.9rem; text-transform: uppercase;
+      letter-spacing: 0.2em; color: #f9f4ea;
+      margin-bottom: 1.5rem;
+    }
+
+    .badge {
+      background: rgba(255,255,255,0.2);
+      padding: 0.3rem 0.8rem;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      margin-right: 0.4rem;
+      margin-bottom: 0.4rem;
+      display: inline-block;
+    }
+
+    .btn {
+      padding: 0.7rem 1.5rem; border-radius: 999px;
+      border: 1px solid transparent;
+      font-size: 0.85rem; font-weight: 600;
+      text-transform: uppercase; cursor: pointer;
+      display: inline-block; margin-right: 0.5rem;
+    }
+
+    .btn-primary { background: var(--bg); color: var(--accent); }
+    .btn-ghost { border: 1px solid #fff; color: var(--bg); background: transparent; }
+
+    .hero-contact-card {
+      background: rgba(243,236,221,0.08);
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+      border: 1px solid rgba(243,236,221,0.2);
+    }
+
+    /* SECTIONS */
+    section { padding: 3.5rem 1.5rem; }
+    .container { max-width: 1100px; margin: 0 auto; }
+
+    .section-title {
+      font-family: Cinzel, serif;
+      font-size: 1.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      margin-bottom: 1.25rem;
+    }
+
+    /* SERVICES */
+    .services-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    .service-card {
+      background: #f8f3e7;
+      padding: 1.6rem; border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    /* GALLERY */
+    .gallery-grid {
+      display: grid; gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .gallery-card { background: #f8f3e7; border-radius: 12px; overflow: hidden; }
+    .gallery-card img { width: 100%; height: 150px; object-fit: cover; }
+    .ba-tag { text-align: center; padding: 0.4rem 0; background: var(--bg-dark); color: var(--bg); font-size: 0.75rem; }
+
+    .after { background: var(--accent) !important; }
+
+    /* FORMS */
+    form {
+      background: #f8f3e7;
+      padding: 1.6rem; border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    input, textarea, select {
+      width: 100%; padding: 0.6rem 0.7rem;
+      border-radius: 8px; border: 1px solid #aaa;
+      background: #fbf7ef; margin-bottom: 1rem;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--bg-dark);
+      color: rgba(243,236,221,0.9);
+      padding: 1.4rem 1.5rem;
+      font-size: 0.8rem;
+    }
+
+    .footer-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; justify-content: space-between;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .hero-inner, .services-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 780px) {
+      .nav-links { display: none; position: absolute; background: #fff; inset: 56px 0 auto; padding: 1rem; }
+      .nav-links.open { display: flex; flex-direction: column; }
+      .mobile-menu-btn { display: block; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <nav class="nav">
+    <div class="nav-left">
+      <img src="https://placehold.co/80x80" class="logo-mark" />
+      <div class="brand-text">
+        <span class="brand-name">Wind + Water</span>
+        <span class="brand-tagline">Residential & Commercial Pressure Washing</span>
+      </div>
+    </div>
+
+    <button class="mobile-menu-btn">&#9776;</button>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#estimate">Estimate</a>
+      <a href="#contact">Contact</a>
+      <a href="#estimate" class="nav-cta">Get a Quote</a>
+    </div>
+
+    <div class="nav-phone"><a href="tel:12028780164">📞 202-878-0164</a></div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+
+    <div>
+      <h1 class="hero-title">Clean Surfaces. Fresh Start.</h1>
+      <p class="hero-subtitle">Residential + Commercial Pressure Washing</p>
+
+      <p class="hero-text">
+        Wind + Water is a family-owned pressure washing company providing
+        professional cleaning for homes and businesses.
+      </p>
+
+      <span class="badge">Locally Owned</span>
+      <span class="badge">Free Estimates</span>
+      <span class="badge">Fully Insured</span>
+
+      <br><br>
+
+      <a href="#estimate" class="btn btn-primary">Request Estimate</a>
+      <a href="tel:12028780164" class="btn btn-ghost">Call Now</a>
+    </div>
+
+    <div class="hero-contact-card">
+      <h3>Book Your Cleaning</h3>
+      <p><strong>Phone:</strong> <a href="tel:12028780164">202-878-0164</a></p>
+      <p><strong>Email:</strong> <a href="mailto:windandwaterpw@gmail.com">windandwaterpw@gmail.com</a></p>
+    </div>
+
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <h2 class="section-title">Services</h2>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Residential Cleaning</h3>
+        <ul>
+          <li>Driveways & sidewalks</li>
+          <li>Siding & softwashing</li>
+          <li>Decks & patios</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <h3>Commercial Cleaning</h3>
+        <ul>
+          <li>Storefronts</li>
+          <li>Parking lots</li>
+          <li>Dumpster pads</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="container">
+    <h2 class="section-title">Before & After</h2>
+
+    <div class="gallery-grid">
+
+      <div class="gallery-card">
+        <img src="https://placehold.co/600x400?text=Before" />
+        <div class="ba-tag">Before</div>
+        <img src="https://placehold.co/600x400?text=After" />
+        <div class="ba-tag after">After</div>
+      </div>
+
+      <div class="gallery-card">
+        <img src="https://placehold.co/600x400?text=Before" />
+        <div class="ba-tag">Before</div>
+        <img src="https://placehold.co/600x400?text=After" />
+        <div class="ba-tag after">After</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ESTIMATE FORM -->
+<section id="estimate">
+  <div class="container">
+    <h2 class="section-title">Request a Free Estimate</h2>
+
+    <form action="mailto:windandwaterpw@gmail.com" method="post" enctype="text/plain">
+      <label>Name *</label>
+      <input type="text" required>
+
+      <label>Email *</label>
+      <input type="email" required>
+
+      <label>Phone</label>
+      <input type="tel">
+
+      <label>Details</label>
+      <textarea></textarea>
+
+      <button class="btn btn-primary">Send Request</button>
+    </form>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <h2 class="section-title">Contact</h2>
+    <p><strong>Phone:</strong> <a href="tel:12028780164">202-878-0164</a></p>
+    <p><strong>Email:</strong> <a href="mailto:windandwaterpw@gmail.com">windandwaterpw@gmail.com</a></p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>© <span id="year"></span> Wind + Water</div>
+    <div>Residential & Commercial Pressure Washing</div>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu
+  const menuBtn = document.querySelector(".mobile-menu-btn");
+  const navLinks = document.getElementById("navLinks");
+  menuBtn.addEventListener("click", () => navLinks.classList.toggle("open"));
+
+  // Set year
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
