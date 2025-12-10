@@ -166,6 +166,27 @@
       padding: 1.6rem; border-radius: 12px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
+    .service-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.service-card li {
+  position: relative;
+  padding-left: 1.8rem;   /* move text to the right */
+  margin-bottom: 0.6rem;
+}
+
+.service-card li::before {
+  content: "•";
+  position: absolute;
+  left: 0.6rem;          /* move bullet inward */
+  top: 0.1rem;
+  font-size: 1.2rem;
+  color: var(--accent);
+}
+
 
     /* GALLERY */
     .gallery-grid {
