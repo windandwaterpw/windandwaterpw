@@ -333,22 +333,23 @@
   <div class="container">
     <h2 class="section-title">Request a Free Estimate</h2>
 
-   <form name="estimate" method="POST" data-netlify="true" action="/success.html">
+  <form name="estimate" method="POST" data-netlify="true" action="/success.html">
   <input type="hidden" name="form-name" value="estimate">
-      <label>Name *</label>
-      <input type="text" required>
 
-      <label>Email *</label>
-      <input type="email" required>
+  <label>Name *</label>
+  <input type="text" name="name" required>
 
-      <label>Phone</label>
-      <input type="tel">
+  <label>Email *</label>
+  <input type="email" name="email" required>
 
-      <label>Details</label>
-      <textarea></textarea>
+  <label>Phone</label>
+  <input type="tel" name="phone">
 
-      <button class="btn btn-primary">Send Request</button>
-    </form>
+  <label>Details</label>
+  <textarea name="details"></textarea>
+
+  <button type="submit" class="btn btn-primary">Send Request</button>
+</form>
   </div>
 </section>
 
