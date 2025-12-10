@@ -333,7 +333,8 @@
   <div class="container">
     <h2 class="section-title">Request a Free Estimate</h2>
 
-    <form action="mailto:windandwaterpw@gmail.com" method="post" enctype="text/plain">
+   <form name="estimate" method="POST" data-netlify="true">
+     <input type="hidden" name="form-name" value="estimate">
       <label>Name *</label>
       <input type="text" required>
 
